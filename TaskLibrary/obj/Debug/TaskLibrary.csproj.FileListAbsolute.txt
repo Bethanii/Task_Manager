@@ -1,0 +1,6 @@
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskLibrary\bin\Debug\TaskLibrary.dll
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskLibrary\bin\Debug\TaskLibrary.pdb
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskLibrary\obj\Debug\TaskLibrary.csprojAssemblyReference.cache
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskLibrary\obj\Debug\TaskLibrary.csproj.CoreCompileInputs.cache
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskLibrary\obj\Debug\TaskLibrary.dll
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskLibrary\obj\Debug\TaskLibrary.pdb
