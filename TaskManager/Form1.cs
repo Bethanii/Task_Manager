@@ -32,22 +32,16 @@ namespace TaskManager
 
             taskItemBox.Items.AddRange(new object[]
             {
-                56.3,
-                2,
-                44.77,
-                32.6548,
-                87.0,
-                47.999,
-                34.6,
-                75.89,
-                88.899,
-                466,
-                1,
-                34,
-                45,
-                33.3333333,
-                6.987654,
-                5
+                "Do laundry",
+                "Get groceries",
+                "Taxes",
+                "Do dishes",
+                "Respond to emails",
+                "Make vacation checklist",
+                "Get vehicle oil change",
+                "Mop floors",
+                "Water plants",
+                "Call grandma",
             });
         }
 
@@ -83,19 +77,19 @@ namespace TaskManager
             string filePath = System.Environment.GetEnvironmentVariable("USERPROFILE") + "\\Tasks.txt";
             string strRead;
 
-            FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(fs);
+            FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write);
+            StreamWriter writer = new StreamWriter(fs);
 
             int count;
-            count = GetCount(filePath);
+            //count = GetCount(filePath);
 
-            for (int counter = 1; counter < count; ++counter)
-            {
-                strRead = reader.ReadLine();
-                taskItemBox.Items.Add(strRead);
-            }
-
-            reader.Close();
+            //for (int counter = 1; counter < count; ++counter)
+            //{
+            //    strRead = reader.Line();
+            //    taskItemBox.Items.Add(strRead);
+            //}
+            writer.WriteLine(buildString);
+            writer.Close();
             fs.Close();
         }
         static int GetCount(string file)

@@ -52,7 +52,7 @@ namespace TaskManager
             "Mop floors",
             "Water plants",
             "Call grandma"});
-            this.taskItemBox.Location = new System.Drawing.Point(447, 102);
+            this.taskItemBox.Location = new System.Drawing.Point(446, 102);
             this.taskItemBox.Name = "taskItemBox";
             this.taskItemBox.Size = new System.Drawing.Size(240, 220);
             this.taskItemBox.TabIndex = 0;
@@ -100,7 +100,7 @@ namespace TaskManager
             // 
             this.button1.BackColor = System.Drawing.Color.Pink;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(264, 381);
+            this.button1.Location = new System.Drawing.Point(335, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(271, 34);
             this.button1.TabIndex = 4;
@@ -110,7 +110,7 @@ namespace TaskManager
             // 
             // textBoxResults
             // 
-            this.textBoxResults.Location = new System.Drawing.Point(94, 381);
+            this.textBoxResults.Location = new System.Drawing.Point(149, 369);
             this.textBoxResults.Name = "textBoxResults";
             this.textBoxResults.Size = new System.Drawing.Size(100, 22);
             this.textBoxResults.TabIndex = 5;
