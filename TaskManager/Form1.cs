@@ -8,15 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaskLibrary;
 
 namespace TaskManager
 {
-    public partial class Form1 : Form
+    public partial class TaskManager : Form
     {
-        public Form1()
+        public TaskManager()
         {
             InitializeComponent();
         }
+        TaskCode t = new TaskCode();
         private void Form1_Load(object sender, EventArgs e)
         {
             weekDayBox.Items.AddRange(new object[]
@@ -47,48 +49,40 @@ namespace TaskManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int weekDay = weekDayBox.CheckedItems.Count;
-            string[] w = new string[weekDay];
-            int selectedIndex = 0;
-            string buildString = "Week day:\r\n";
+            TaskCode t = new TaskCode();
+            t.weekDay = weekDayBox.CheckedItems.Count;
+            string[] w = new string[t.weekDay];
+            t.selectedIndex = 0;
+            t.BuildString = "Week day:\r\n";
 
             foreach (var item in weekDayBox.CheckedItems)
             {
-                w[selectedIndex] = item.ToString();
-                buildString += w[selectedIndex] + "\r\n";
-                ++selectedIndex;
+                w[t.selectedIndex] = item.ToString();
+                t.BuildString += w[t.selectedIndex] + "\r\n";
+                ++t.selectedIndex;
             }
 
-            int taskItem = taskItemBox.CheckedItems.Count;
-            string[] task = new string[taskItem];
-            selectedIndex = 0;
-            buildString += "\r\nTasks assigned for the day: \r\n";
+            t.taskItem = taskItemBox.CheckedItems.Count;
+            string[] task = new string[t.taskItem];
+            t.selectedIndex = 0;
+            t.BuildString += "\r\nTasks assigned for the day: \r\n";
 
             foreach (var item in taskItemBox.CheckedItems)
             {
-                task[selectedIndex] = item.ToString();
-                buildString += task[selectedIndex] + "\r\n";
-                ++selectedIndex;
+                task[t.selectedIndex] = item.ToString();
+                t.BuildString += task[t.selectedIndex] + "\r\n";
+                ++t.selectedIndex;
             }
 
-            MessageBox.Show(buildString);
-            textBoxResults.Text = buildString;
+            MessageBox.Show(t.BuildString);
+            textBoxResults.Text = t.BuildString;
 
             string filePath = System.Environment.GetEnvironmentVariable("USERPROFILE") + "\\Tasks.txt";
-            string strRead;
 
             FileStream fs = new FileStream(filePath, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(fs);
 
-            int count;
-            //count = GetCount(filePath);
-
-            //for (int counter = 1; counter < count; ++counter)
-            //{
-            //    strRead = reader.Line();
-            //    taskItemBox.Items.Add(strRead);
-            //}
-            writer.WriteLine(buildString);
+            writer.WriteLine(t.BuildString);
             writer.Close();
             fs.Close();
         }
@@ -111,6 +105,11 @@ namespace TaskManager
             sr.Close();
 
             return count;
+        }
+
+        private void TaskManager_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

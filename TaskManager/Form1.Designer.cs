@@ -1,7 +1,7 @@
 ﻿
 namespace TaskManager
 {
-    partial class Form1
+    partial class TaskManager
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace TaskManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskManager));
             this.taskItemBox = new System.Windows.Forms.CheckedListBox();
             this.weekDayBox = new System.Windows.Forms.CheckedListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +40,9 @@ namespace TaskManager
             // 
             // taskItemBox
             // 
-            this.taskItemBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskItemBox.BackColor = System.Drawing.SystemColors.Info;
+            this.taskItemBox.CheckOnClick = true;
+            this.taskItemBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskItemBox.FormattingEnabled = true;
             this.taskItemBox.Items.AddRange(new object[] {
             "Do laundry",
@@ -52,13 +55,14 @@ namespace TaskManager
             "Mop floors",
             "Water plants",
             "Call grandma"});
-            this.taskItemBox.Location = new System.Drawing.Point(446, 102);
+            this.taskItemBox.Location = new System.Drawing.Point(359, 89);
             this.taskItemBox.Name = "taskItemBox";
-            this.taskItemBox.Size = new System.Drawing.Size(240, 220);
+            this.taskItemBox.Size = new System.Drawing.Size(244, 200);
             this.taskItemBox.TabIndex = 0;
             // 
             // weekDayBox
             // 
+            this.weekDayBox.CheckOnClick = true;
             this.weekDayBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weekDayBox.FormattingEnabled = true;
             this.weekDayBox.Items.AddRange(new object[] {
@@ -69,40 +73,50 @@ namespace TaskManager
             "Friday",
             "Saturday",
             "Sunday"});
-            this.weekDayBox.Location = new System.Drawing.Point(118, 111);
+            this.weekDayBox.Location = new System.Drawing.Point(58, 89);
             this.weekDayBox.Name = "weekDayBox";
-            this.weekDayBox.Size = new System.Drawing.Size(232, 200);
+            this.weekDayBox.Size = new System.Drawing.Size(237, 200);
             this.weekDayBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.LightSalmon;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 63);
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(72, 51);
+            this.label1.MinimumSize = new System.Drawing.Size(210, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 24);
+            this.label1.Size = new System.Drawing.Size(210, 26);
             this.label1.TabIndex = 2;
             this.label1.Text = "Chose Day of Week";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.LightSalmon;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(510, 63);
+            this.label2.Location = new System.Drawing.Point(386, 51);
+            this.label2.MinimumSize = new System.Drawing.Size(190, 2);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 24);
+            this.label2.Size = new System.Drawing.Size(190, 26);
             this.label2.TabIndex = 3;
             this.label2.Text = "Chose Task";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Pink;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(335, 362);
+            this.button1.Location = new System.Drawing.Point(223, 333);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(271, 34);
+            this.button1.Size = new System.Drawing.Size(211, 37);
             this.button1.TabIndex = 4;
             this.button1.Text = "Get Weekly Schedule";
             this.button1.UseVisualStyleBackColor = false;
@@ -110,24 +124,34 @@ namespace TaskManager
             // 
             // textBoxResults
             // 
-            this.textBoxResults.Location = new System.Drawing.Point(149, 369);
+            this.textBoxResults.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxResults.Location = new System.Drawing.Point(108, 387);
+            this.textBoxResults.MinimumSize = new System.Drawing.Size(400, 130);
+            this.textBoxResults.Multiline = true;
             this.textBoxResults.Name = "textBoxResults";
-            this.textBoxResults.Size = new System.Drawing.Size(100, 22);
+            this.textBoxResults.Size = new System.Drawing.Size(429, 150);
             this.textBoxResults.TabIndex = 5;
+            this.textBoxResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // TaskManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Wheat;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(678, 549);
             this.Controls.Add(this.textBoxResults);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.weekDayBox);
             this.Controls.Add(this.taskItemBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "TaskManager";
+            this.Text = "TaskManager";
+            this.Load += new System.EventHandler(this.TaskManager_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

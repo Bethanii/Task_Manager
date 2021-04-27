@@ -1,5 +1,4 @@
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.csprojAssemblyReference.cache
-C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.Form1.resources
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.Properties.Resources.resources
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.csproj.GenerateResource.cache
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.csproj.CoreCompileInputs.cache
@@ -11,3 +10,4 @@ C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\bin\Debug\TaskLibr
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.csproj.CopyComplete
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.exe
 C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.pdb
+C:\Users\hambetn\source\repos\TaskManagerSolution\TaskManager\obj\Debug\TaskManager.TaskManager.resources
