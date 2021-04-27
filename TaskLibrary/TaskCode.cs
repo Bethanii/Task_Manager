@@ -8,5 +8,10 @@ namespace TaskLibrary
 {
     public class TaskCode
     {
+        public int taskItem { get; set; }
+        public int weekDay { get; set; }
+        public string BuildString { get; set; }
+        public string task { get; set; }
+        public int selectedIndex { get; set; }
     }
 }
